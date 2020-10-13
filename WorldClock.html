@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="WorldClock.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+        <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    </head>
+
+    <body class="page">
+
+        <div id="header-section"></div>
+        <div id="clock-section">
+            <div id='map-holder'></div>
+        </div>
+        <div id="tail-section">
+            <div id='action-buttons'>
+                <button class="action-button" onclick="addCity()">Add City</button>
+                <button class="action-button" onclick="addCalendar()">Add to calender</button>
+            </div>
+            <div id='range-section'>
+                <div id='slider-range'></div>
+                <div id='ruler'>
+                    <label class='ruler-label'>12 am</label>
+                    <label class='ruler-label'>1</label>
+                    <label class='ruler-label'>2</label>
+                    <label class='ruler-label'>3</label>
+                    <label class='ruler-label'>4</label>
+                    <label class='ruler-label'>5</label>
+                    <label class='ruler-label'>6</label>
+                    <label class='ruler-label'>7</label>
+                    <label class='ruler-label'>8</label>
+                    <label class='ruler-label'>9</label>
+                    <label class='ruler-label'>10</label>
+                    <label class='ruler-label'>11</label>
+                    <label class='ruler-label'>12 pm</label>
+                    <label class='ruler-label'>1</label>
+                    <label class='ruler-label'>2</label>
+                    <label class='ruler-label'>3</label>
+                    <label class='ruler-label'>4</label>
+                    <label class='ruler-label'>5</label>
+                    <label class='ruler-label'>6</label>
+                    <label class='ruler-label'>7</label>
+                    <label class='ruler-label'>8</label>
+                    <label class='ruler-label'>9</label>
+                    <label class='ruler-label'>10</label>
+                    <label class='ruler-label'>11</label>
+                    <label class='ruler-label'>12 am</label>
+                    <label class='ruler-label'>1</label>
+                    <label class='ruler-label'>2</label>
+                    <label class='ruler-label'>3</label>
+                    <label class='ruler-label'>4</label>
+                    <label class='ruler-label'>5</label>
+                    <label class='ruler-label'>6</label>
+                    <label class='ruler-label'>7</label>
+                    <label class='ruler-label'>8</label>
+                    <label class='ruler-label'>9</label>
+                    <label class='ruler-label'>10</label>
+                    <label class='ruler-label'>11</label>
+                    <label class='ruler-label'>12 pm</label>
+                    <label class='ruler-label'>1</label>
+                    <label class='ruler-label'>2</label>
+                    <label class='ruler-label'>3</label>
+                    <label class='ruler-label'>4</label>
+                    <label class='ruler-label'>5</label>
+                    <label class='ruler-label'>6</label>
+                    <label class='ruler-label'>7</label>
+                    <label class='ruler-label'>8</label>
+                    <label class='ruler-label'>9</label>
+                    <label class='ruler-label'>10</label>
+                    <label class='ruler-label'>11</label>
+                    <label class='ruler-label'>12 am</label>
+                    <label class='ruler-label'>1</label>
+                    <label class='ruler-label'>2</label>
+                    <label class='ruler-label'>3</label>
+                    <label class='ruler-label'>4</label>
+                    <label class='ruler-label'>5</label>
+                    <label class='ruler-label'>6</label>
+                    <label class='ruler-label'>7</label>
+                    <label class='ruler-label'>8</label>
+                    <label class='ruler-label'>9</label>
+                    <label class='ruler-label'>10</label>
+                    <label class='ruler-label'>11</label>
+                    <label class='ruler-label'>12 pm</label>
+                    <label class='ruler-label'>1</label>
+                    <label class='ruler-label'>2</label>
+                    <label class='ruler-label'>3</label>
+                    <label class='ruler-label'>4</label>
+                    <label class='ruler-label'>5</label>
+                    <label class='ruler-label'>6</label>
+                    <label class='ruler-label'>7</label>
+                    <label class='ruler-label'>8</label>
+                    <label class='ruler-label'>9</label>
+                    <label class='ruler-label'>10</label>
+                    <label class='ruler-label'>11</label>
+                    <label class='ruler-label'>12 am</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup-container">
+            <div id="add-popup">
+                <div class='popup-header'>
+                    <div class="header-label">
+                        <span class="label-text">Add City</span>
+                    </div>
+                    <div class="close-icon" onclick="closeModal()">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </div>
+                </div>
+                <div class='popup-body'>
+                    <div class="select-names">
+                        <span class="label-text">Select Country : </span>
+                        <select id='country-select' onchange="onSelectCountry()"></select>
+                    </div>
+                    <div class="select-names">
+                        <span class="label-text">Select City: </span>
+                        <select id='city-select' onchange="onSelectCity()"></select>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button onclick="addCityList()" class="add-button">Add</button>
+                </div>
+            </div>
+            <div id="add-calendar">
+                <div class='popup-header'>
+                    <div class="header-label">
+                        <span class="label-text">Add To Calendar</span>
+                    </div>
+                    <div class="close-icon" onclick="closeModal()">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </div>
+                </div>
+                <div class='popup-body'>
+                    <div class="select-names">
+                        <span class="label-text">Add Title: </span>
+                        <input type='text' id='calender-title' onchange="setCalendarTitle()"></select>
+                    </div>
+                    <div class="select-names">
+                        <span class="label-text">Select City: </span>
+                        <select id='calendar-city-select' onchange="selectCalendarCity()"></select>
+                    </div>
+                    <div class="err-names">
+                        <span id="err-text"></span>
+                    </div>
+                </div>
+                <div class="popup-footer">
+                    <button class="add-button" onclick="addSlot()">Add</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/queue.v1.min.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+        <script src="https://MomentJS.com/downloads/moment.js"></script>
+        <script src="https://momentjs.com/downloads/moment-timezone-with-data-10-year-range.min.js"></script>
+        <!-- <script src="d3-tip.js"></script> -->
+        <script src="WorldClock.js"></script>
+    </body>
+</html> 

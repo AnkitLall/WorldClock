@@ -1,0 +1,377 @@
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #807e7e; 
+    border-radius: 10px;
+}
+
+.page {
+    background: #202020;
+}
+
+#header-section {
+    height: 15%;
+    background: #404040;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.arrow-icons {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow-icons:hover {
+    background: #322b2b;
+}
+
+#info-section {
+    height: 100%;
+    width: 90%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.info-panel {
+    height: 100%;
+    width: 159px;
+    background: #404040;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.info-panel-selected {
+    height: 100%;
+    width: 159px;
+    background: #a0ce46;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.time-label {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.period-label {
+    display: flex;
+    justify-content: center;
+    font-size: 7px;
+    height: 20%;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-label {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    height: 15%;
+}
+
+.no-cities-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+}
+
+
+/*---------Map--------*/
+
+#clock-section {
+    height: 70%;
+    /* overflow: auto; */
+}
+
+#map {
+    fill: #404040;
+}
+
+#map-holder {
+    width: 100vw;
+    height: 100%;
+    fill: #404040;
+    overflow: auto;
+}
+
+.country{
+    fill: #404040; 
+    stroke: #404040;
+    stroke-width: 0.5; 
+}
+
+/*-------Action items style------*/
+
+
+
+#popup-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.3);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    display: none;
+}
+
+#add-popup {
+    background: #a5a0a0;
+    border-radius: 5px;
+    height: 200px;
+    min-width: 400px;
+
+    visibility: hidden;
+    display: none;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    background: #747272;
+    justify-content: space-between;
+}
+
+.header-label {
+    margin: 5px;
+}
+
+.label-text {
+    color: white;
+}
+
+.close-icon {
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.popup-body {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-names {
+    margin: 15px;
+}   
+
+.popup-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-button {
+    margin-right: 40px;
+    width: 70px;
+    height: 30px;
+    background: black;
+    border-radius: 10px;
+    color: white;
+}
+
+#add-calendar {
+    background: #a5a0a0;
+    border-radius: 5px;
+    height: 200px;
+    min-width: 400px;
+
+    visibility: hidden;
+    display: none;
+}
+
+#tail-section {
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+}
+
+#action-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.action-button {
+    background: #19A0FA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+#err-text {
+    color: #bf2727;
+}
+
+/*----------Map----------*/
+
+.marker-selected {
+    fill: #a0ce46;
+    stroke: #a0ce46;
+    cursor: pointer;
+}
+
+.marker-unselect {
+    fill: grey;
+    stroke: grey;
+    cursor: pointer;
+}
+
+#range-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow: auto;
+}
+
+#slider-range {
+    background: grey;
+    height: 2px;
+    border: none;
+    width: 3026px;
+    margin-left: 15px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: none !important;
+    background: #ededed !important;
+}
+
+/* .ui-state-active:hover {
+    background: #ededed !important;
+} */
+
+.ui-slider .ui-slider-handle {
+    border-radius: 10px !important;
+    width: .7em !important;
+    height: 0.7em !important;
+    background: #19A0FA !important;
+}  
+
+.ui-slider-horizontal .ui-slider-range {
+    background: #19A0FA !important;
+}
+
+/*-----------ruler------------*/
+
+#ruler {
+    width: 3026;
+    color: #666060;
+    background-color: #232323;
+    /* background-image: 
+    linear-gradient(90deg, 
+      rgba(73, 73, 73, 0.5) 0, 
+      rgba(73, 73, 73, 0.5) 2%, 
+      transparent 2%
+    ), 
+    linear-gradient(180deg, 
+      #ffffff 50%, 
+      transparent 50%
+    ), 
+    linear-gradient(90deg, 
+      transparent 50%, 
+      rgba(73, 73, 73, 0.5) 50%, 
+      rgba(73, 73, 73, 0.5) 52%, 
+      transparent 52%
+    ), 
+    linear-gradient(180deg, 
+      #ffffff 70%, 
+      transparent 70%
+    ), 
+    linear-gradient(90deg, 
+      transparent 10%,
+      rgba(73, 73, 73, 0.4) 10%, 
+      rgba(73, 73, 73, 0.4) 12%, 
+      transparent 12%, 
+      
+      transparent 20%,
+      rgba(73, 73, 73, 0.4) 20%, 
+      rgba(73, 73, 73, 0.4) 22%, 
+      transparent 22%, 
+      
+      transparent 30%, 
+      rgba(73, 73, 73, 0.4) 30%,
+      rgba(73, 73, 73, 0.4) 32%, 
+      transparent 32%, 
+      
+      transparent 40%, 
+      rgba(73, 73, 73, 0.4) 40%, 
+      rgba(73, 73, 73, 0.4) 42%, 
+      transparent 42%, 
+      
+      transparent 60%, 
+      rgba(73, 73, 73, 0.4) 60%, 
+      rgba(73, 73, 73, 0.4) 62%, 
+      transparent 62%, 
+      
+      transparent 70%, 
+      rgba(73, 73, 73, 0.4) 70%, 
+      rgba(73, 73, 73, 0.4) 72%, 
+      transparent 72%, 
+      
+      transparent 80%, 
+      rgba(73, 73, 73, 0.4) 80%, 
+      rgba(73, 73, 73, 0.4) 82%, 
+      transparent 82%, 
+      
+      transparent 90%, 
+      rgba(73, 73, 73, 0.4) 90%, 
+      rgba(73, 73, 73, 0.4) 92%, 
+      transparent 92%
+    ); */
+  background-size: 42px 20px;
+  background-repeat: repeat-x;
+  min-height: 20px;
+  
+  /* only needed for labels */
+  white-space:nowrap;
+  font-size:0;
+  margin:0;
+  margin-left: 6px;
+  padding:0;
+}
+
+.ruler-label {
+    font-size:9px;
+    padding-top:2px;
+    /* display:inline-block; */
+    width:42px;
+    text-indent:3px;
+  }
+
